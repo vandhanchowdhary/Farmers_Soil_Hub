@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Farmer's Soil Hub</title>
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+
+        <div class="body-container-1">
+            
+            <div id="mobileNav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="../index.html">HOME</a>
+                <a href="about.html">ABOUT</a>
+                <a href="contact.html">CONTACT</a>
+            </div>
+
+            <div class="navhead">
+                <button class="menu-icon" onclick="openNav()">&#9776; </button>
+                <div class="logo-container">
+                    <img src="../res/text-logo.png" alt="main-logo">
+                    
+                </div>
+                
+                <div class="links-container">
+                    <a href="../index.html">HOME</a>
+                    
+                    <div class="dropdown">
+                        SERVICES
+                        <div class="dropdown-content">
+
+                            <div class="dropdown-1">
+                                Soil Testing  ❯
+                                <div class="dropdown-content-1">
+                                    <a href="#">By User</a>
+                                    <a href="#">By Professional</a>
+                                    <a href="#">By 3rd Party</a>
+                                </div>
+                            </div>
+                            
+                            <div class="dropdown-2">
+                                Fertilizers ❯
+                                <div class="dropdown-content-2">
+                                    <a href="#">Organic</a>
+                                    <a href="#">Inorganic</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                        
+                    <a href="pages/about.html">ABOUT</a>
+                </div>
+                <div class="right-navcontainer">
+                    <a href="pages/contact.html"><div class="contact-btn">CONTACT US</div></a>
+                </div>
+            </div>
+            <div class="top-content">
+                <div class="left-panel confirmpage">
+                <section class="register-section">
+                    <h2>Thank You for registering with us..</h2>
+                    <p>We will contact you on your phone number shortly..</p>
+        
+                    <a href="../index.html" class="home-button">Back to Home Page</a>
+                </section>
+                </div>
+
+                <div class="right-panel confirmpage"></div>
+            </div>
+        </div>
+    <div id="accessibilityButton" onclick="toggleAccessibilityOptions()">Accessibility</div>
+    <div id="accessibility_option">
+        <button onclick="increaseTextSize()">Increase Text Size</button>
+        <button onclick="decreaseTextSize()">Decrease Text Size</button>
+        <button onclick="getUsualTextSize()">Normal Text Size</button>
+        <button onclick="toggleHighContrastDark()">High Contrast</button>
+        <!-- <button onclick="toggleHighContrastLight()">High Contrast [Light]</button> -->
+    </div>
+    <script src="../script.js"></script>
+    </body>
+</html>

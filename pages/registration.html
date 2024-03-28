@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Farmer's Soil Hub - Registration</title>
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+        <div class="body-container">
+            
+            <div id="mobileNav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="index.html">HOME</a>
+                <a href="pages/about.html">ABOUT</a>
+                <a href="pages/contact.html">CONTACT</a>
+            </div>
+
+            <div class="navhead">
+                <button class="menu-icon" onclick="openNav()">&#9776; </button>
+                <div class="logo-container">
+                    <img src="../res/text-logo.png" alt="main-logo">
+                    
+                </div>
+                
+                <div class="links-container">
+                    <a href="../index.html">HOME</a>
+                    
+                    <div class="dropdown">
+                        SERVICES
+                        <div class="dropdown-content">
+
+                          <div class="dropdown-1">
+                              Soil Testing  ❯
+                              <div class="dropdown-content-1">
+                                  <a href="#">By User</a>
+                                  <a href="#">By Professional</a>
+                                  <a href="#">By 3rd Party</a>
+                              </div>
+                          </div>
+                          
+                          <div class="dropdown-2">
+                                Fertilizers ❯
+                                <div class="dropdown-content-2">
+                                  <a href="#">Organic</a>
+                                  <a href="#">Inorganic</a>
+                              </div>
+                          </div>
+                        </div>
+
+                    </div>
+                      
+                    <a href="pages/about.html">ABOUT</a>
+                </div>
+                <div class="right-navcontainer">
+                    <a href="pages/contact.html"><div class="contact-btn">CONTACT US</div></a>
+                </div>
+            </div>
+            <div class="mainpage">
+                <section class="register-section">
+                    <h2>Register with Farmer's Soil Hub</h2>
+                    <br>
+                    <form action="confirmation.html" name="register-form">
+                        <label for="name">Full Name: </label>
+                        <input type="text" id="name" name="name" required/>
+                        <label for="phone">Phone Number: </label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required />
+                        <label for="password">Password: </label>
+                        <input type="password" name="password" id="password" required />
+                        <label for="confirm_password">Confirm Password: </label>
+                        <input type="password" name="confirm_password" id="confirm_password" required />
+                        <br>
+                        <button type="submit" class="cta-button">Register</button>
+                        <br><br>
+                    </form>
+                </section>
+            </div>
+        </div>
+
+        <div id="accessibilityButton" onclick="toggleAccessibilityOptions()">Accessibility</div>
+        <div id="accessibility_option">
+            <button onclick="increaseTextSize()">Increase Text Size</button>
+            <button onclick="decreaseTextSize()">Decrease Text Size</button>
+            <button onclick="getUsualTextSize()">Normal Text Size</button>
+            <button onclick="toggleHighContrastDark()">High Contrast</button>
+            <!-- <button onclick="toggleHighContrastLight()">High Contrast [Light]</button> -->
+        </div>
+    </body>
+    <script src="../script.js"></script>
+    <script>
+
+    function simpleValidate() {
+        let x = document.forms['register-form']['password'].value;
+        let y = document.forms['register-form']['confirm_password'].value;
+        if (x != y) {
+            alert("Passwords must match");
+            return false;
+        }
+    }
+
+    </script>
+</html>
