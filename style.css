@@ -152,9 +152,11 @@ a {
 
 /* dropdown logic end */
 
-
-
-
+.dropdown-arrow {
+    content: "\003E";
+    display: inline-block;
+    transform: rotate(90deg);
+}
 .right-navcontainer {
     flex-grow: 2;
 }
@@ -294,11 +296,11 @@ h1 {font-size: 4em; font-weight: bold; margin: 0; letter-spacing: 2px;}
     /* box-shadow: 0 30px 40px rgba(0,0,0,0.1); */
     color: rgb(199, 195, 195);
 }
-
+/*
 .right-panel.main {
 
 }
-
+*/
 
 .right-panel.aboutpage {
     background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.5)),url('res/tractor.jpg');
