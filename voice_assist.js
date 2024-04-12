@@ -13,7 +13,7 @@ if ('webkitSpeechRecognition' in window) {
             if (result.includes('home')) {
                 window.location.href = 'index.html';
                 isListening = false;
-            } else if (result.includes('register' || 'registration')) {
+            } else if ((result.includes('register')) || (result.includes('registration'))) {
                 window.location.href = 'pages/registration.html';
                 isListening = false;
             } else if (result.includes('about')) {
