@@ -1,3 +1,20 @@
+var currentPath = window.location.pathname;
+
+// Extract the folder name from the path
+var pathParts = currentPath.split('/');
+var folderName = pathParts[pathParts.length - 2];
+
+var parent_directory = "";
+var index_directory = "";
+
+if (folderName === stringToMatch) {
+    parent_directory = "";
+    index_directory = "../";
+} else {
+    parent_directory = "pages/";
+    index_directory = "";
+}
+
 if ('webkitSpeechRecognition' in window) {
     const recognition = new webkitSpeechRecognition();
     recognition.continuous = false;
@@ -14,17 +31,17 @@ if ('webkitSpeechRecognition' in window) {
                 window.location.href = 'index.html';
                 isListening = false;
             } else if ((result.includes('register')) || (result.includes('registration'))) {
-                window.location.href = 'pages/registration.html';
+                window.location.href = parent_directory + 'registration.html';
                 isListening = false;
             } else if (result.includes('about')) {
-                window.location.href = 'pages/about.html';
+                window.location.href = parent_directory + 'about.html';
                 isListening = false;
             } 
             else if (result.includes('contact')) {
-                window.location.href = 'pages/contact.html';
+                window.location.href = parent_directory + 'contact.html';
                 isListening = false;
             } else if (result.includes('soil testing') || ((result.includes('organic') || result.includes('inorganic') && result.includes('fertilizers')) )) {
-                window.location.href = 'pages/redirect.html';
+                window.location.href = parent_directory + 'redirect.html';
                 isListening = false;
             } else {
                 alert('Unrecognised Command! Try again.');
