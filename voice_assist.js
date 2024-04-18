@@ -7,7 +7,7 @@ var folderName = pathParts[pathParts.length - 2];
 var parent_directory = "";
 var index_directory = "";
 
-if (folderName === stringToMatch) {
+if (folderName === "pages") {
     parent_directory = "";
     index_directory = "../";
 } else {
@@ -28,7 +28,7 @@ if ('webkitSpeechRecognition' in window) {
 
         if (isListening) {
             if (result.includes('home')) {
-                window.location.href = 'index.html';
+                window.location.href = index_directory + 'index.html';
                 isListening = false;
             } else if ((result.includes('register')) || (result.includes('registration'))) {
                 window.location.href = parent_directory + 'registration.html';
@@ -40,7 +40,7 @@ if ('webkitSpeechRecognition' in window) {
             else if (result.includes('contact')) {
                 window.location.href = parent_directory + 'contact.html';
                 isListening = false;
-            } else if (result.includes('soil testing') || ((result.includes('organic') || result.includes('inorganic') && result.includes('fertilizers')) )) {
+            } else if (result.includes('soil testing') || (result.includes('organic') && result.includes('fertilizers')) || (result.includes('inorganic') && result.includes('fertilizers'))) {
                 window.location.href = parent_directory + 'redirect.html';
                 isListening = false;
             } else {

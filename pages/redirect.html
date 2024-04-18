@@ -35,17 +35,17 @@
                             <div class="dropdown-1">
                                 Soil Testing <i class="fa fa-chevron-right invert-1"></i>
                                 <div class="dropdown-content-1">
-                                    <a href="redirect.html">By User</a>
-                                    <a href="redirect.html">By Professional</a>
-                                    <a href="redirect.html">By 3rd Party</a>
+                                    <a href="redirect.html?req=SoilTesting-ByUser">By User</a>
+                                    <a href="redirect.html?req=SoilTesting-ByProfessional">By Professional</a>
+                                    <a href="redirect.html?req=SoilTesting-By3rdParty">By 3rd Party</a>
                                 </div>
                             </div>
                     
                             <div class="dropdown-2">
                                 Fertilizers <i class="fa fa-chevron-right invert-2"></i>
                                 <div class="dropdown-content-2">
-                                    <a href="redirect.html">Organic</a>
-                                    <a href="redirect.html">Inorganic</a>
+                                    <a href="redirect.html?req=Organic-Fertilizers">Organic</a>
+                                    <a href="redirect.html?req=Inrganic-Fertilizers">Inorganic</a>
                                 </div>
                             </div>
                         </div>
@@ -60,6 +60,7 @@
             <div class="top-content">
                 <div class="left-panel redirect-page">
                 <section class="register-section">
+                    <div id="content"></div>
                     <h2>Coming Soon...</h2>
                     <p>This is a random redirect page..</p>
         
@@ -69,7 +70,62 @@
 
                 <div class="right-panel redirect-page"></div>
             </div>
+
+            <div id="accessibilityButton" onclick="toggleAccessibilityOptions()">Accessibility</div>
+            <div id="accessibility_option">
+                <button onclick="increaseTextSize()">Increase Text Size</button>
+                <button onclick="decreaseTextSize()">Decrease Text Size</button>
+                <button onclick="getUsualTextSize()">Normal Text Size</button>
+                <button onclick="toggleHighContrastDark()">High Contrast</button>
+                <button id="voiceButton">Start Voice Assistant</button>
+                <!-- <button onclick="toggleHighContrastLight()">High Contrast [Light]</button> -->
+            </div>
         </div>
     </body>
     <script src="../script.js"></script>
+    <script src="../voice_assist.js"></script>
+    <script>
+        window.onload = function() {
+
+            function getParameterByName(name, url) {
+                if (!url) url = window.location.href;
+                name = name.replace(/[\[\]]/g, "\\$&");
+                var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                    results = regex.exec(url);
+                if (!results) return null;
+                if (!results[2]) return '';
+                return decodeURIComponent(results[2].replace(/\+/g, " "));
+            }
+            
+            var req = getParameterByName('req');
+            // Display the values in the specific div element
+            document.getElementById('content').innerHTML = 'Page: ' + req.split("-")[0] + " " + req.split("-")[1];
+
+            
+            // the anti-piracy features added here
+            // event handler to prevent Ctrl + C
+            document.addEventListener('keydown', function (event) {
+                // Check if Ctrl key and 'C' key are pressed simultaneously
+                if (event.ctrlKey && event.key === 'c') {
+                    // Prevent default action (copying)
+                    event.preventDefault();
+                    alert('❌ Ctrl + C key combination is prohibited!');
+                }
+            });
+            // event handler to prevent right click
+            document.addEventListener('contextmenu', function (event) {
+                // Prevent the default context menu
+                event.preventDefault();
+                // Show custom alert box
+                alert('❌ Right click is prohibited!');
+            });
+
+            // Disable text dragging
+            document.addEventListener('dragstart', function (event) {
+                // Prevent dragging of text
+                alert('❌ Dragging is prohibited!');
+                event.preventDefault();
+            });
+        }
+    </script>
 </html>
