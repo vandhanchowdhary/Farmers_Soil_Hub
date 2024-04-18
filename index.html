@@ -17,6 +17,28 @@
             <a href="index.html">HOME</a>
             <a href="pages/about.html">ABOUT</a>
             <a href="pages/contact.html">CONTACT</a>
+            <div class="side-dropdown">
+                SERVICES <i class="fa fa-chevron-right"></i></span>
+                <div class="side-dropdown-content">
+                    <div class="side-dropdown-1">
+                        <span class="sub-menu-title">Soil Testing <i class="fa fa-chevron-down"></i></span>
+                        <div class="side-dropdown-content-1">
+                            <a href="pages/redirect.html?req=SoilTesting-ByUser"><i class="fa fa-dot-circle-o"></i>By User</a>
+                            <a href="pages/redirect.html?req=SoilTesting-ByProfessional"><i class="fa fa-dot-circle-o"></i>By Professional</a>
+                            <a href="pages/redirect.html?req=SoilTesting-By3rdParty"><i class="fa fa-dot-circle-o"></i>By 3rd Party</a>
+                        </div>
+                    </div>
+                    <div class="side-dropdown-1">
+                        <span class="sub-menu-title">Fertilizers <i class="fa fa-chevron-down"></i></span>
+                        <div class="side-dropdown-content-1">
+                            <a href="pages/redirect.html?req=Organic-Fertilizers"><i class="fa fa-dot-circle-o"></i>Organic</a>
+                            <a href="pages/redirect.html?req=Inorganic-Fertilizers"><i class="fa fa-dot-circle-o"></i>Inorganic</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
         </div>
 
         <div class="navhead">
@@ -71,6 +93,20 @@
                         <p>Connecting over 20k farmers via streamlined network</p>
                     </div>
                 </div>
+
+                <div class="mobile-logbar">
+                    <button class="login-btn" id="myBtnMobile">Login</button>
+                    <a href="pages/registration.html"><div class="register-btn" onclick="">Register</div></a>
+                </div>
+                <div id="myModalMobile" class="modalMobile">
+
+                    <div class="modal-content">
+                        <span class="close" id="closeMobile">&times;</span>
+                        <p>Login popup: Feature coming soon..</p>
+                    </div>
+
+                </div>
+
             </div>
 
             <div class="right-panel main">
@@ -83,7 +119,7 @@
                     <div id="myModal" class="modal">
 
                         <div class="modal-content">
-                            <span class="close">&times;</span>
+                            <span class="close" id="closeOthers">&times;</span>
                             <p>Login popup: Feature coming soon..</p>
                         </div>
 
@@ -137,16 +173,23 @@
     <script src="voice_assist.js"></script>
     <script>
         var modal = document.getElementById("myModal");
+        var modalMobile = document.getElementById("myModalMobile");
 
         // Get the button that opens the modal
         var btn = document.getElementById("myBtn");
+        var btn2 = document.getElementById("myBtnMobile");
 
         // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
+        var span = document.getElementById("closeOthers");
+        var spanMobile = document.getElementById("closeMobile");
 
         // When the user clicks the button, open the modal 
         btn.onclick = function () {
             modal.style.display = "flex";
+        }
+
+        btn2.onclick = function() {
+            modalMobile.style.display = "flex";
         }
 
         // When the user clicks on <span> (x), close the modal
@@ -154,10 +197,15 @@
             modal.style.display = "none";
         }
 
+        spanMobile.onclick = function() {
+            modalMobile.style.display = "none";
+        }
+
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function (event) {
-            if (event.target == modal) {
+            if (event.target == modal || event.target == modalMobile) {
                 modal.style.display = "none";
+                modalMobile.style.display = "none";
             }
         }
 

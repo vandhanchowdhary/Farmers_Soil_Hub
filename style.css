@@ -200,7 +200,9 @@ a {
 /* dropdown logic end */
 
 
-
+.mobile-logbar {
+    display: none;
+}
 
 .right-navcontainer {
     flex-grow: 2;
@@ -386,7 +388,7 @@ h1 {
 
 /*p {line-height: 1.0; color: #4CAF50; font-weight: bold; font-size: 1em;}*/
 
-
+/* sidenav things start */
 .sidenav {
     height: 100%;
     width: 0;
@@ -421,11 +423,61 @@ h1 {
     margin-left: 50px;
 }
 
+.side-dropdown {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    position: relative;
+}
+
+.side-dropdown-title {
+    cursor: pointer;
+}
+
+.side-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #111;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    z-index: 1;
+}
+
+.side-dropdown-content .sub-menu-title {
+    padding: 8px 8px 8px 32px;
+    color: #818181;
+    display: block;
+    position: relative;
+}
+
+.side-dropdown-content a {
+    padding: 0.4em 3em;
+    text-decoration: none;
+    color: #818181;
+    display: block;
+}
+
+.side-dropdown-1 {
+    padding: 0.5em 0;
+}
+
+.side-dropdown-1 a {
+    font-size: 0.95em;
+}
+
+.side-dropdown:hover .side-dropdown-content {
+    display: block;
+}
+
+/* sidenav things end */
 
 /* modal thing */
 
 /* The Modal (background) */
-.modal {
+.modal, .modalMobile {
     display: none;
     /* Hidden by default */
     align-items: center;
@@ -705,6 +757,14 @@ i {
 
 
 @media screen and (max-width: 600px) {
+
+    .mobile-logbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-top: 2em;
+    }
 
     .body-container {
         background-position: center;

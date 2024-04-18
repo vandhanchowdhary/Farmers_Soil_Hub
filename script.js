@@ -25,7 +25,7 @@ window.onload = function () {
 };
 
 function openNav() {
-    document.getElementById('mobileNav').style.width = "250px";
+    document.getElementById('mobileNav').style.width = "75%";
 }
 function closeNav() {
     document.getElementById('mobileNav').style.width = "0";
