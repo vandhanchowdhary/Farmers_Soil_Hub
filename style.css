@@ -137,7 +137,7 @@ a {
     display: inline-block;
     padding: 16px;
     font-size: 1em;
-    min-width: 6em;
+    width: 7.2em;
     cursor: pointer;
 }
 
@@ -173,7 +173,6 @@ a {
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
     border-radius: 0.5em;
 }
 
@@ -535,6 +534,13 @@ h1 {
     color: white;
 }
 
+.center-register {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
 form {
     text-align: left;
     margin-top: 20px;
@@ -661,6 +667,10 @@ form .cta-button:hover {
     background-color: black !important;
 }
 
+.high-contrast-dark a {
+    color: #fff !important;
+}
+
 .high-contrast-light {
     color: black !important;
     background-color: #fff !important;
@@ -668,6 +678,10 @@ form .cta-button:hover {
 
 i {
     margin-right: 0.5em;
+}
+
+.servicon {
+    margin-right: -0.5em;
 }
 
 
