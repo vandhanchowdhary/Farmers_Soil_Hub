@@ -82,7 +82,7 @@
                 <section class="register-section">
                     <h2>Register with Farmer's Soil Hub</h2>
                     <br>
-                    <form action="confirmation.html" name="register-form">
+                    <form name="register-form" onsubmit="simpleValidate()">
                         <label for="name">Full Name: </label>
                         <input type="text" id="name" name="name" required/>
                         <label for="phone">Phone Number: </label>
@@ -116,9 +116,12 @@
     function simpleValidate() {
         let x = document.forms['register-form']['password'].value;
         let y = document.forms['register-form']['confirm_password'].value;
-        if (x != y) {
-            alert("Passwords must match");
+        if (x != y || (x.length < 8 && x == y)) {
+            alert("Passwords aren't as per the guidelines\n\nGuidelines:\n1. Passwords should be atleast 8 characters\n2. Passwords should match");
             return false;
+        } else {
+            document.forms['register-form'].action = "confirmation.html";
+            return true;
         }
     }
 
