@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Farmer's Soil Hub - Registration</title>
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="body-container">
+            
+            <div id="mobileNav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="../index.html">HOME</a>
+                <a href="about.html">ABOUT</a>
+                <a href="contact.html">CONTACT</a>
+                <div class="side-dropdown">
+                    SERVICES <i class="fa fa-chevron-right"></i></span>
+                    <div class="side-dropdown-content">
+                        <div class="side-dropdown-1">
+                            <span class="sub-menu-title">Soil Testing <i class="fa fa-chevron-down"></i></span>
+                            <div class="side-dropdown-content-1">
+                                <a href="redirect.html?req=SoilTesting-ByUser"><i class="fa fa-dot-circle-o"></i>By User</a>
+                                <a href="redirect.html?req=SoilTesting-ByProfessional"><i class="fa fa-dot-circle-o"></i>By Professional</a>
+                                <a href="redirect.html?req=SoilTesting-By3rdParty"><i class="fa fa-dot-circle-o"></i>By 3rd Party</a>
+                            </div>
+                        </div>
+                        <div class="side-dropdown-1">
+                            <span class="sub-menu-title">Fertilizers <i class="fa fa-chevron-down"></i></span>
+                            <div class="side-dropdown-content-1">
+                                <a href="redirect.html?req=Organic-Fertilizers"><i class="fa fa-dot-circle-o"></i>Organic</a>
+                                <a href="redirect.html?req=Inorganic-Fertilizers"><i class="fa fa-dot-circle-o"></i>Inorganic</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                </div>
+            </div>
+
+            <div class="navhead">
+                <button class="menu-icon" onclick="openNav()">&#9776; </button>
+                <div class="logo-container">
+                    <img src="../res/text-logo.png" alt="main-logo">
+                    
+                </div>
+                
+                <div class="links-container">
+                    <a href="../index.html"><i class="fa fa-home"></i>HOME</a>
+                    
+                    <div class="dropdown">
+                        <i class="fa fa-cogs"></i> SERVICES <i class="fa fa-chevron-right servicon"></i>
+                        <div class="dropdown-content">
+                    
+                            <div class="dropdown-1">
+                                Soil Testing <i class="fa fa-chevron-right invert-1"></i>
+                                <div class="dropdown-content-1">
+                                    <a href="redirect.html?req=SoilTesting-ByUser">By User</a>
+                                    <a href="redirect.html?req=SoilTesting-ByProfessional">By Professional</a>
+                                    <a href="redirect.html?req=SoilTesting-By3rdParty">By 3rd Party</a>
+                                </div>
+                            </div>
+                    
+                            <div class="dropdown-2">
+                                Fertilizers <i class="fa fa-chevron-right invert-2"></i>
+                                <div class="dropdown-content-2">
+                                    <a href="redirect.html?req=Organic-Fertilizers">Organic</a>
+                                    <a href="redirect.html?req=Inrganic-Fertilizers">Inorganic</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                      
+                    <a href="about.html"><i class="fa fa-users"></i>ABOUT</a>
+                </div>
+                <div class="right-navcontainer">
+                    <a href="contact.html"><div class="contact-btn"><i class="fa fa-phone fa-lg"></i>CONTACT US</div></a>
+                </div>
+            </div>
+            <div class="mainpage center-register">
+                <section class="register-section">
+                    <h2>Register with Farmer's Soil Hub</h2>
+                    <br>
+                    <form name="register-form" onsubmit="simpleValidate()">
+                        <label for="name">Full Name: </label>
+                        <input type="text" id="name" name="name" required/>
+                        <label for="phone">Phone Number: </label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required />
+                        <label for="password">Password: </label>
+                        <input type="password" name="password" id="password" required />
+                        <label for="confirm_password">Confirm Password: </label>
+                        <input type="password" name="confirm_password" id="confirm_password" required />
+                        <br>
+                        <button type="submit" class="cta-button">Register</button>
+                        <br><br>
+                    </form>
+                </section>
+            </div>
+        </div>
+
+        <div id="accessibilityButton" onclick="toggleAccessibilityOptions()">Accessibility</div>
+        <div id="accessibility_option">
+            <button onclick="increaseTextSize()">Increase Text Size</button>
+            <button onclick="decreaseTextSize()">Decrease Text Size</button>
+            <button onclick="getUsualTextSize()">Normal Text Size</button>
+            <button onclick="toggleHighContrastDark()">High Contrast</button>
+            <button id="voiceButton">Start Voice Assistant</button>
+            <!-- <button onclick="toggleHighContrastLight()">High Contrast [Light]</button> -->
+        </div>
+    </body>
+    <script src="../script.js"></script>
+    <script src="../voice_assist.js"></script>
+    <script>
+
+    function simpleValidate() {
+        let x = document.forms['register-form']['password'].value;
+        let y = document.forms['register-form']['confirm_password'].value;
+        if (x != y || (x.length < 8 && x == y)) {
+            alert("Passwords aren't as per the guidelines\n\nGuidelines:\n1. Passwords should be atleast 8 characters\n2. Passwords should match");
+            return false;
+        } else {
+            document.forms['register-form'].action = "confirmation.html";
+            return true;
+        }
+    }
+
+    </script>
+</html>

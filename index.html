@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Farmers Soil Hub</title>
+</head>
+
+<body>
+    <div class="body-container">
+
+        <div id="mobileNav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">HOME</a>
+            <a href="pages/about.html">ABOUT</a>
+            <a href="pages/contact.html">CONTACT</a>
+            <div class="side-dropdown">
+                SERVICES <i class="fa fa-chevron-right"></i>
+                <div class="side-dropdown-content">
+                    <div class="side-dropdown-1">
+                        <span class="sub-menu-title">Soil Testing <i class="fa fa-chevron-down"></i></span>
+                        <div class="side-dropdown-content-1">
+                            <a href="pages/redirect.html?req=SoilTesting-ByUser"><i class="fa fa-dot-circle-o"></i>By User</a>
+                            <a href="pages/redirect.html?req=SoilTesting-ByProfessional"><i class="fa fa-dot-circle-o"></i>By Professional</a>
+                            <a href="pages/redirect.html?req=SoilTesting-By3rdParty"><i class="fa fa-dot-circle-o"></i>By 3rd Party</a>
+                        </div>
+                    </div>
+                    <div class="side-dropdown-1">
+                        <span class="sub-menu-title">Fertilizers <i class="fa fa-chevron-down"></i></span>
+                        <div class="side-dropdown-content-1">
+                            <a href="pages/redirect.html?req=Organic-Fertilizers"><i class="fa fa-dot-circle-o"></i>Organic</a>
+                            <a href="pages/redirect.html?req=Inorganic-Fertilizers"><i class="fa fa-dot-circle-o"></i>Inorganic</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+        </div>
+
+        <div class="navhead">
+            <button class="menu-icon" onclick="openNav()">&#9776; </button>
+            <div class="logo-container">
+                <img src="res/text-logo.png" alt="main-logo">
+
+            </div>
+
+            <div class="links-container">
+                <a href="index.html"><i class="fa fa-home"></i>HOME</a>
+
+                <div class="dropdown">
+                    <i class="fa fa-cogs"></i> SERVICES <i class="fa fa-chevron-right servicon"></i>
+                    <div class="dropdown-content">
+
+                        <div class="dropdown-1">
+                            Soil Testing <i class="fa fa-chevron-right invert-1"></i>
+                            <div class="dropdown-content-1">
+                                <a href="pages/redirect.html?req=SoilTesting-ByUser">By User</a>
+                                <a href="pages/redirect.html?req=SoilTesting-ByProfessional">By Professional</a>
+                                <a href="pages/redirect.html?req=SoilTesting-By3rdParty">By 3rd Party</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown-2">
+                            Fertilizers <i class="fa fa-chevron-right invert-2"></i>
+                            <div class="dropdown-content-2">
+                                <a href="pages/redirect.html?req=Organic-Fertilizers">Organic</a>
+                                <a href="pages/redirect.html?req=Inorganic-Fertilizers">Inorganic</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <a href="pages/about.html"><i class="fa fa-users"></i>ABOUT</a>
+            </div>
+            <div class="right-navcontainer">
+                <a href="pages/contact.html">
+                    <div class="contact-btn"><i class="fa fa-phone fa-lg"></i>CONTACT US</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="top-content main">
+            <div class="left-panel main">
+                <div class="left-main-content">
+                    <h1>Farmers Soil Hub</h1>
+                    <div class="main-content">
+                        <p>Your resource for soil fertility improvement</p>
+                        <p>Connecting over 20k farmers via streamlined network</p>
+                    </div>
+                </div>
+
+                <div class="mobile-logbar">
+                    <button class="login-btn" id="myBtnMobile">Login</button>
+                    <a href="pages/registration.html"><div class="register-btn" onclick="">Register</div></a>
+                </div>
+                <div id="myModalMobile" class="modalMobile">
+
+                    <div class="modal-content">
+                        <span class="close" id="closeMobile">&times;</span>
+                        <p>Login popup: Feature coming soon..</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="right-panel main">
+                <header>
+                    <p>Begin your journey here</p>
+                    <button class="login-btn" id="myBtn">Login</button>
+                    <a href="pages/registration.html"><div class="register-btn" onclick="">Register</div></a>
+
+
+                    <div id="myModal" class="modal">
+
+                        <div class="modal-content">
+                            <span class="close" id="closeOthers">&times;</span>
+                            <p>Login popup: Feature coming soon..</p>
+                        </div>
+
+                    </div>
+                </header>
+
+            </div>
+        </div>
+
+        <!-- <div class="mainpage" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                <div class="left-main-content">
+                    <h1>Farmer's Soil Hub</h1>
+                    <div class="main-content">
+                        <p>Your resource for soil fertility improvement</p>
+                        <p>Connecting over 20k farmers via streamlined network</p>
+                    </div>
+                </div>
+                <header>
+                    <p>Begin your journey here</p>
+                    <button class="login-btn" id="myBtn">Login</button>
+                    <a href="pages/registration.html"><button class="register-btn" onclick="">Register</button></a>
+
+
+                    <div id="myModal" class="modal">
+
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p>Login popup modal</p>
+                        </div>
+                    
+                    </div>
+
+                </header>
+            </div> -->
+
+
+
+    <div id="accessibilityButton" onclick="toggleAccessibilityOptions()">Accessibility</div>
+    <div id="accessibility_option">
+        <button onclick="increaseTextSize()">Increase Text Size</button>
+        <button onclick="decreaseTextSize()">Decrease Text Size</button>
+        <button onclick="getUsualTextSize()">Normal Text Size</button>
+        <button onclick="toggleHighContrastDark()">High Contrast</button>
+        <button id="voiceButton">Start Voice Assistant</button>
+        <!-- <button onclick="toggleHighContrastLight()">High Contrast [Light]</button> -->
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="voice_assist.js"></script>
+    <script>
+        var modal = document.getElementById("myModal");
+        var modalMobile = document.getElementById("myModalMobile");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+        var btn2 = document.getElementById("myBtnMobile");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementById("closeOthers");
+        var spanMobile = document.getElementById("closeMobile");
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "flex";
+        }
+
+        btn2.onclick = function() {
+            modalMobile.style.display = "flex";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        spanMobile.onclick = function() {
+            modalMobile.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal || event.target == modalMobile) {
+                modal.style.display = "none";
+                modalMobile.style.display = "none";
+            }
+        }
+
+    </script>
+</body>
+
+</html>
